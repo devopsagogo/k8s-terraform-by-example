@@ -13,11 +13,15 @@ jobs:
         with:
           terraform_version: "1.7.5"
       - name: fmt
-        run: terraform -chdir=terraform fmt -check -recursive
-      - name: init
-        run: terraform -chdir=terraform init -backend=false
-      - name: validate
-        run: terraform -chdir=terraform validate
+        run: terraform -chdir=terraform/modules/cluster fmt -check -recursive && terraform -chdir=terraform/environments/dev fmt -check -recursive && terraform -chdir=terraform/environments/prod fmt -check -recursive
+      - name: init dev
+        run: terraform -chdir=terraform/environments/dev init -backend=false
+      - name: validate dev
+        run: terraform -chdir=terraform/environments/dev validate
+      - name: init prod
+        run: terraform -chdir=terraform/environments/prod init -backend=false
+      - name: validate prod
+        run: terraform -chdir=terraform/environments/prod validate
 
   manifests:
     runs-on: ubuntu-latest

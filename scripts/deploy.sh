@@ -9,10 +9,10 @@ echo "==> Building image"
 docker build -t "$IMAGE" app/
 
 echo "==> Provisioning cluster (Terraform)"
-cd terraform
+cd terraform/environments/dev
 terraform init -input=false
 terraform apply -auto-approve -input=false
-cd ..
+cd ../../..
 
 echo "==> Loading image into Kind"
 kind load docker-image "$IMAGE" --name "$CLUSTER"
