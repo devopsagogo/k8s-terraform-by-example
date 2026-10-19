@@ -39,6 +39,8 @@ jobs:
         run: docker build -t status-page:local app/
       - name: Load image into Kind
         run: kind load docker-image status-page:local
+      - name: Create namespace
+        run: kubectl create namespace status-page
       - name: Apply manifests
         run: kubectl apply -f k8s/ -n status-page
       - name: Wait for rollout
