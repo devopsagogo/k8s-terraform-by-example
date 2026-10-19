@@ -27,13 +27,24 @@ k8s-terraform-by-example/
 │   ├── deployment.yaml
 │   ├── service.yaml
 │   └── configmap.yaml
+├── helm/status-page/
+│   ├── Chart.yaml
+│   ├── values.yaml
+│   └── templates/
 ├── terraform/
-│   ├── main.tf
-│   ├── variables.tf
-│   └── outputs.tf
+│   ├── modules/cluster/
+│   └── environments/
+│       ├── dev/
+│       └── prod/
+├── labs/
+│   └── 01-06
 ├── scripts/deploy.sh
-├── docs/DECISIONS.md
-└── .github/workflows/ci.yml
+├── docs/
+│   ├── DECISIONS.md
+│   └── RUNBOOK.md
+└── .github/workflows/
+    ├── terraform.yml
+    └── manifests.yml
 ```
 
 ## Quick start
