@@ -9,3 +9,4 @@ Four exercises. Run in order.
 | 03 | Roll back |
 | 04 | Extend Terraform |
 | 05 | Kill a pod, watch it come back |
+| 06 | Debug a CrashLoopBackOff |

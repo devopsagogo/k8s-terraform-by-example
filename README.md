@@ -61,6 +61,12 @@ helm install status-page helm/status-page -n status-page
 The raw manifests in `k8s/` are the reference implementation.
 The chart shows the same resources expressed as a parameterized package.
 
+## Runbook
+
+Operational procedures for the most common failures—Pending pods,
+CrashLoopBackOff, OOMKilled, stuck rollouts, and 502s with healthy pods.
+See [docs/RUNBOOK.md](docs/RUNBOOK.md).
+
 ## Design decisions
 
 See docs/DECISIONS.md. Kind for CI speed, explicit namespace, ClusterIP
