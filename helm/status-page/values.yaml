@@ -1,0 +1,23 @@
+replicaCount: 2
+
+image:
+  repository: status-page
+  tag: local
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+config:
+  appEnv: demo
+  appName: status-page
+
+resources:
+  requests:
+    cpu: 50m
+    memory: 64Mi
+  limits:
+    cpu: 200m
+    memory: 128Mi
