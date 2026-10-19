@@ -1,4 +1,3 @@
-<div align="center">
 
 # k8s-terraform-by-example
 
@@ -8,7 +7,6 @@
 ![terraform](https://img.shields.io/badge/terraform-%E2%89%A51.5-7B42BC?style=flat-square&logo=terraform&logoColor=white)
 ![kubernetes](https://img.shields.io/badge/kubernetes-%E2%89%A51.27-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 
-</div>
 
 ## What this is
 
@@ -42,6 +40,13 @@ k8s-terraform-by-example/
 ```bash
 ./scripts/deploy.sh
 kubectl port-forward -n status-page svc/status-page 8080:80
+```
+
+Or with make:
+
+```bash
+make up
+make down
 ```
 
 ## Design decisions
