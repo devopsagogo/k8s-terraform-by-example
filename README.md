@@ -3,7 +3,8 @@
 
 **Kubernetes and Terraform by example — a working status page on Kind, provisioned by IaC, verified by CI.**
 
-![ci](https://img.shields.io/github/actions/workflow/status/devopsagogo/k8s-terraform-by-example/ci.yml?style=flat-square&label=ci)
+![terraform](https://img.shields.io/github/actions/workflow/status/devopsagogo/k8s-terraform-by-example/terraform.yml?style=flat-square&label=terraform)
+![manifests](https://img.shields.io/github/actions/workflow/status/devopsagogo/k8s-terraform-by-example/manifests.yml?style=flat-square&label=manifests)
 ![terraform](https://img.shields.io/badge/terraform-%E2%89%A51.5-7B42BC?style=flat-square&logo=terraform&logoColor=white)
 ![kubernetes](https://img.shields.io/badge/kubernetes-%E2%89%A51.27-326CE5?style=flat-square&logo=kubernetes&logoColor=white)
 
