@@ -2,10 +2,10 @@
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: azure/setup-kubectl@v4
-        with:
-          version: "v1.27.3"
-      - name: Validate manifests (offline)
+      - name: Install kubeconform
         run: |
-          # This checks syntax and structure without needing a cluster
-          kubectl apply --dry-run=client --validate=false -f k8s/ -n status-page
+          wget https://github.com/yannh/kubeconform/releases/download/v0.6.7/kubeconform-linux-amd64.tar.gz
+          tar -xzf kubeconform-linux-amd64.tar.gz
+          sudo mv kubeconform /usr/local/bin/
+      - name: Validate manifests
+        run: kubeconform -strict -summary k8s/
